@@ -17,10 +17,8 @@
 
     function updateTime() {
       const now = new Date();
-
-      // BUG: Uses user's local timezone, not San Francisco timezone
       document.getElementById("time").innerText =
-        "Local time in San Francisco: " + now.toLocaleTimeString();
+        "Local time in San Francisco: " + now.toLocaleTimeString("en-US", { timeZone: "America/Los_Angeles" });
     }
 
     async function getWeather() {

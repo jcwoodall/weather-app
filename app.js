@@ -30,7 +30,7 @@
         const data = await response.json();
 
         // BUG: Misspelled temperature key
-        const temp = data.current_weather.temprature;
+        const temp = data.current_weather.temperature;
 
         // BUG: Weather code is shown directly instead of translated
         const weatherCode = data.current_weather.weathercode;
